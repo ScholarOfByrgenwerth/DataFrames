@@ -1,0 +1,20 @@
+import pandas as pd
+
+from pd import DataFrame
+data_2 = pandas.read_csv('Tons DataFrame From Materials Tab.csv')
+
+spliced_dataset =  (data_2[1::7])
+
+
+export_csv = spliced_dataset.to_csv (r'C:\Users\chicke\Desktop\export_dataframe.csv', index = None, header=True)
+
+Data_Set_Materials_Tab = pandas.read_csv('export_dataframe-from materials tab.csv')
+df1 = pd.DataFrame(Data_Set_Materials_Tab)
+df1.columns = ['Date','Tons']
+
+
+Data_Set_Tons_Tab = pandas.read_csv('Tons DataFrame From Tons Tab.csv')
+df2 = pd.DataFrame(Data_Set_Tons_Tab)
+df2.columns = ['Date','Tons']
+
+df1.equals(df2)
