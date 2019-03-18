@@ -18,3 +18,6 @@ df2 = pd.DataFrame(Data_Set_Tons_Tab)
 df2.columns = ['Date','Tons']
 
 df1.equals(df2)
+
+export_csv = df1.to_csv (r'C:\Users\chicke\Desktop\export_dataframe1.csv', index = None, header=True)
+export_csv = df2.to_csv (r'C:\Users\chicke\Desktop\export_dataframe2.csv', index = None, header=True)
