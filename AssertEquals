@@ -1,8 +1,8 @@
 import pandas as pd
-
+    #pull csv file into python
 from pd import DataFrame
 data_2 = pandas.read_csv('Tons DataFrame From Materials Tab.csv')
-
+    #splice 
 spliced_dataset =  (data_2[1::7])
 
 
