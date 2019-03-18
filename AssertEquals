@@ -21,3 +21,7 @@ df1.equals(df2)
 
 export_csv = df1.to_csv (r'C:\Users\chicke\Desktop\export_dataframe1.csv', index = None, header=True)
 export_csv = df2.to_csv (r'C:\Users\chicke\Desktop\export_dataframe2.csv', index = None, header=True)
+
+
+with pandas.option_context('display.max_rows', 365, 'display.max_columns', 2):
+    print (df1 == df2)
