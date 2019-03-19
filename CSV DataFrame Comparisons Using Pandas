@@ -4,13 +4,13 @@ import pandas as pd
 from pd import DataFrame
 data_2 = pandas.read_csv('Tons DataFrame From Materials Tab.csv')
     
-    #splice desired data points
+    #slice desired data points
 spliced_dataset =  (data_2[1::7])
 
-    #create new csv file with spliced dataframe
+    #create new csv file with sliced dataframe
 export_csv = spliced_dataset.to_csv (r'C:\Users\chicke\Desktop\export_dataframe.csv', index = None, header=True)
     
-    #pull spliced data set to compare elements with data set 2 
+    #pull sliced data set to compare elements with data set 2 
 Data_Set_Materials_Tab = pandas.read_csv('export_dataframe-from materials tab.csv')
 df1 = pd.DataFrame(Data_Set_Materials_Tab)
 df1.columns = ['Date','Tons']
@@ -23,7 +23,7 @@ df2.columns = ['Date','Tons']
     #test elements for equality 
 df1.equals(df2)
 
-    #export spliced data set and data set 2 under new names
+    #export sliced data set and data set 2 under new names
 export_csv = df1.to_csv (r'C:\Users\chicke\Desktop\export_dataframe1.csv', index = None, header=True)
 export_csv = df2.to_csv (r'C:\Users\chicke\Desktop\export_dataframe2.csv', index = None, header=True)
 
